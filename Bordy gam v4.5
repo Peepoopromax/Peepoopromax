@@ -1,0 +1,221 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "script prtty much v4 จากpeepooคนแจกวิชา", HidePremium = false, Introtext = "script", SaveConfig = true, ConfigFolder = "script"})
+
+OrionLib:MakeNotification({
+	Name = "open gui",
+	Content = "loading",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+function autofarmF()
+    while _G.autofarmF == true do
+local args = {
+    [1] = "fish",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+local args = {
+    [1] = "fish",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+        wait(10)
+     end
+    end
+
+function autofarmG()
+    while _G.autofarmG == true do
+local args = {
+    [1] = "gold",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+local args = {
+    [1] = "gold",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+        wait(10)
+     end
+    end
+
+function autofarmGP()
+    while _G.autofarmGP == true do
+local args = {
+    [1] = "gunpowder",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+local args = {
+    [1] = "gunpowder",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+        wait(10)
+     end
+    end
+
+function autofarmI()
+    while _G.autofarmI == true do
+local args = {
+    [1] = "iron",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+local args = {
+    [1] = "iron",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+        wait(10)
+     end
+    end
+
+function autofarmFl()
+    while _G.autofarmFl == true do
+local args = {
+    [1] = "flowers",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+local args = {
+    [1] = "flowers",
+    [2] = false,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+        wait(10)
+     end
+    end
+
+function autofarmCH()
+    while _G.autofarmCH == true do
+local args = {
+    [1] = "chalices",
+    [2] = false,
+    [3] = true
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+local args = {
+    [1] = "chalices",
+    [2] = false,
+    [3] = flase
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ShopService"):WaitForChild("RF"):WaitForChild("Shop"):InvokeServer(unpack(args))
+        wait(10)
+     end
+    end
+    
+local TutTab = Window:MakeTab({
+	Name = "auto farm money",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "auto farm money"
+})
+
+TutTab:AddToggle({
+	Name = "AutoFish",
+	Default = false,
+	Callback = function(Value)
+	   _G.autofarmF = Value
+    autofarmF()
+	end    
+})
+
+TutTab:AddToggle({
+	Name = "AutoGold",
+	Default = false,
+	Callback = function(Value)
+	   _G.autofarmG = Value
+    autofarmG()
+	end    
+})
+
+TutTab:AddToggle({
+	Name = "AutoGunpowder",
+	Default = false,
+	Callback = function(Value)
+	   _G.autofarmGP = Value
+    autofarmGP()
+	end    
+})
+
+TutTab:AddToggle({
+	Name = "AutoIron",
+	Default = false,
+	Callback = function(Value)
+	   _G.autofarmI = Value
+    autofarmI()
+	end    
+})
+
+TutTab:AddToggle({
+	Name = "AutoFlowers",
+	Default = false,
+	Callback = function(Value)
+	   _G.autofarmFl = Value
+    autofarmFl()
+	end    
+})
+
+TutTab:AddToggle({
+	Name = "AutoChalices",
+	Default = false,
+	Callback = function(Value)
+	   _G.autofarmCH = Value
+    autofarmCH()
+	end    
+})
+
+local TutTab = Window:MakeTab({
+	Name = "Player",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = TutTab:AddSection({
+	Name = "coming soon"
+})
+
+b:AddToggle({
+	Name = "a",
+	Default = false,
+	Callback = function(Value)
+		print("Sus")
+	end    
+})
+
+Tab:AddColorpicker({
+	Name = "Colorpicker",
+	Default = Color3.fromRGB(255,255,255),
+	Callback = function(Value)
+		print(Value)
+	end	  
+})
+
+OrionLib:Init()
